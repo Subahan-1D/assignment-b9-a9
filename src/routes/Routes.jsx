@@ -7,6 +7,7 @@ import Update from "../pages/Update";
 import Login from "../pages/Login";
 import Register from "../pages/Register";
 import DealsDetails from "../pages/DealsDetails";
+import PrivateRoute from "./PrivateRoute";
 
 const router = createBrowserRouter([
     {
@@ -21,7 +22,7 @@ const router = createBrowserRouter([
             },
             {
                 path:'/deals/:id',
-                element:<DealsDetails></DealsDetails>,
+                element:<PrivateRoute><DealsDetails></DealsDetails></PrivateRoute>,
                 loader:()=>fetch('/Deals.json')
 
             },

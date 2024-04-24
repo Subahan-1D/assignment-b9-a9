@@ -1,0 +1,74 @@
+[
+  {
+    "id": 1,
+    "relevant_image": "https://i.ibb.co/k64X86w/1.jpg",
+    "estate_title": "Marina Bay Sands",
+    "segment_name": "Hotel",
+    "description": "Iconic luxury hotel offering breathtaking views of the city skyline and world-class amenities.",
+    "price": 500,
+    "status": "rent",
+    "area": 2000,
+    "location": "Singapore",
+    "facilities": ["living room", "swimming pool", "Kitchen"]
+  },
+  {
+    "id": 2,
+    "relevant_image": "https://i.ibb.co/TP7xzqj/2.jpg",
+    "estate_title": "Four Seasons Resort Maui at Wailea",
+    "segment_name": "Resort",
+    "description": "Exquisite tropical resort set on Maui's sunny Wailea coast, featuring spacious suites and impeccable service.",
+    "price": 800,
+    "status": "rent",
+    "area": 2500,
+    "location": "Maui, Hawaii",
+    "facilities": ["living room", "swimming pool", "Kitchen"]
+  },
+  {
+    "id": 3,
+    "relevant_image": "https://i.ibb.co/CmCvY7b/3.jpg",
+    "estate_title": "Luxury Beachfront Villa",
+    "segment_name": "Vacation Rental",
+    "description": "Magnificent beachfront villa with private pool and direct access to the pristine sandy beach.",
+    "price": 1200,
+    "status": "rent",
+    "area": 1800,
+    "location": "Maldives",
+    "facilities": ["living room", "swimming pool", "Kitchen"]
+  },
+  {
+    "id": 4,
+    "relevant_image": "https://i.ibb.co/PZJBhBr/4.jpg",
+    "estate_title": "Aspen Mountain Lodge",
+    "segment_name": "Lodge",
+    "description": "Cozy lodge nestled in the heart of Aspen, offering ski-in/ski-out access and rustic charm.",
+    "price": 400,
+    "status": "rent",
+    "area": 1500,
+    "location": "Aspen, Colorado",
+    "facilities": ["living room", "Kitchen"]
+  },
+  {
+    "id": 5,
+    "relevant_image": "https://i.ibb.co/kS2xBt7/5.jpg",
+    "estate_title": "Coastal Guesthouse",
+    "segment_name": "Guesthouse",
+    "description": "Charming guesthouse overlooking the ocean, providing a peaceful coastal retreat.",
+    "price": 200,
+    "status": "rent",
+    "area": 1200,
+    "location": "Monterey, California",
+    "facilities": ["living room", "Kitchen"]
+  },
+  {
+    "id": 6,
+    "relevant_image": "https://i.ibb.co/hsTnvbg/6.jpg",
+    "estate_title": "Sunset Motel",
+    "segment_name": "Motel",
+    "description": "Budget-friendly motel offering comfortable accommodations and convenient amenities.",
+    "price": 100,
+    "status": "rent",
+    "area": 1000,
+    "location": "Miami, Florida",
+    "facilities": ["living room"]
+  }
+]

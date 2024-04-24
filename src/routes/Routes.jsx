@@ -5,6 +5,7 @@ import ErrorElement from "../Layouts/ErrorElement";
 import Blog from "../pages/Blog";
 import Update from "../pages/Update";
 import Login from "../pages/Login";
+import Register from "../pages/Register";
 
 const router = createBrowserRouter([
     {
@@ -14,7 +15,8 @@ const router = createBrowserRouter([
         children: [
             {
                 path: '/',
-                element: <Home></Home>
+                element: <Home></Home>,
+                loader: () => fetch('/Deals.json')
             },
             {
                 path: 'blog',
@@ -27,7 +29,12 @@ const router = createBrowserRouter([
             {
                 path: '/login',
                 element: <Login></Login>
-            }
+            },
+            {
+                path:'/register',
+                element:<Register></Register>
+            },
+
         ]
     }
 ]);

@@ -1,8 +1,12 @@
+import Deals from "./Deals";
+import Slider from "./Slider";
 
 const Home = () => {
     return (
         <div >
-           <h2 className="font-poppins text-5xl"> This is home</h2>
+            <Slider></Slider>
+            <h2 className="text-4xl font-playfair-display text-center"> See All Deals</h2>
+            <Deals></Deals>
         </div>
     );
 };

@@ -2,7 +2,7 @@ import 'animate.css'
 const Slider = () => {
     return (
         <>
-            <div className="carousel container mx-auto w-full rounded-2xl">
+            <div className="carousel container mx-auto w-full rounded-2xl ">
                 <div id="slide1" className="carousel-item relative w-full">
                     <div className="hero min-h-screen" style={{ backgroundImage: 'url(https://i.ibb.co/pdR64vm/pexels-pixabay-258154.jpg)' }}>
                         <div className="hero-overlay bg-opacity-60"></div>

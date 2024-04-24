@@ -1,4 +1,4 @@
-import { GithubAuthProvider, GoogleAuthProvider, createUserWithEmailAndPassword, onAuthStateChanged, signInWithEmailAndPassword, signInWithPopup, signOut } from "firebase/auth";
+import { GithubAuthProvider, GoogleAuthProvider, createUserWithEmailAndPassword, onAuthStateChanged, signInWithEmailAndPassword, signInWithPopup, signOut, updateProfile } from "firebase/auth";
 import { createContext, useEffect, useState } from "react";
 import auth from "../firebase/firebase.config";
 
@@ -7,33 +7,41 @@ const GoogleProvider = new GoogleAuthProvider();
 const GithubProvider = new GithubAuthProvider();
 const AuthProvider = ({ children }) => {
     const [user, setUser] = useState(null);
-    const [loading,setLoading] = useState(true);
+    const [loading, setLoading] = useState(true);
     // create user
     const createUser = (email, password) => {
         setLoading(true)
         return createUserWithEmailAndPassword(auth, email, password)
+    }
+
+    // update profile user
+    const updateUserProfile = (name,photoURL) =>{
+      return  updateProfile(auth.currentUser, {
+            displayName: name,
+             photoURL: photoURL
+          })
     }
     // google login
     const signInWithGoogle = () => {
         setLoading(true);
         return signInWithPopup(auth, GoogleProvider);
     }
-// github login
+    // github login
     const signInWithGithub = () => {
         setLoading(true);
         return signInWithPopup(auth, GithubProvider);
     }
     // logout
-    const logOut = () =>{
+    const logOut = () => {
         setLoading(true)
         return signOut(auth)
     }
     // signIn
-    const signIn = (email,password) =>{
+    const signIn = (email, password) => {
         setLoading(true)
-        return signInWithEmailAndPassword(auth,email,password)
+        return signInWithEmailAndPassword(auth, email, password)
     }
-   
+
 
     useEffect(() => {
         const unSubscribe = onAuthStateChanged(auth, currentUser => {
@@ -54,6 +62,7 @@ const AuthProvider = ({ children }) => {
         signInWithGithub,
         signInWithGoogle,
         logOut,
+        updateUserProfile
 
     }
     return (

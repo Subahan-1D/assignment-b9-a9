@@ -15,7 +15,7 @@ useEffect(()=>{
         {deals.map((deal, index) => (
             <div key={index} className="no-underline text-black">
                 <div className="card bg-base-100 shadow-xl border-gray-200 border-solid" data-aos="fade-down">
-                    <figure className="bg-gray-200 rounded-3xl p-4 sm:p-6 md:p-8"><img className="max-h-64 w-full" src={deal.relevant_image} alt={deal.estate_title} /></figure>
+                    <figure className="bg-gray-200 rounded-xl p-4 sm:p-2 md:p-4"><img className="max-h-64 w-full" src={deal.relevant_image} alt={deal.estate_title} /></figure>
                     <div className="card-body p-4 sm:p-6 md:p-8">
                         <h2 className="card-title text-lg sm:text-xl md:text-2xl">{deal.estate_title}</h2>
                         <div className="text-sm sm:text-base md:text-lg">
@@ -29,7 +29,7 @@ useEffect(()=>{
                         </div>
                         <hr className="border-t border-gray-300 border-dashed my-4 w-full" />
                         <div className="flex justify-center">
-                            <Link to={`deals/${deal.id}`} className="btn btn-primary hover:bg-blue-400 bg-black-500  text-white">View Details</Link>
+                            <Link to={`deals/${deal.id}`} className="btn btn-primary hover:bg-blue-400 bg-black-500  text-white">View Property</Link>
                         </div>
                     </div>
                 </div>

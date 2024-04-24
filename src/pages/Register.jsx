@@ -3,11 +3,13 @@ import { Link } from "react-router-dom";
 import { AuthContext } from "../Providers/AuthProvider";
 import { toast, ToastContainer } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
+import { FaEye,FaEyeSlash} from "react-icons/fa";
 import { updateProfile } from "firebase/auth";
 
 
 const Register = () => {
-    const {createUser} =useContext(AuthContext)
+    const { createUser } = useContext(AuthContext);
+    const [showPassword,setShowPassword] = useState(false)
     const handleRegister = async (e) => {
         e.preventDefault();
 
@@ -81,7 +83,15 @@ const Register = () => {
                                 <label className="label">
                                     <span className="label-text">Password</span>
                                 </label>
-                                <input type="password" name="password" placeholder="password" className="input input-bordered" required />
+                                <div className="relative ">
+                                <input type={showPassword ? "text" :"password"} name="password" placeholder="password" className="input input-bordered w-full" required />
+                                <span className="absolute top-4 right-4" onClick={()=>setShowPassword(!showPassword)}>
+                                    {
+                                        showPassword ? <FaEyeSlash></FaEyeSlash> :<FaEye></FaEye>
+                                    }
+                                </span>
+                                </div>
+                                <br />
                                 <label className="label">
                                     <a href="#" className="label-text-alt link link-hover">Forgot password?</a>
                                 </label>

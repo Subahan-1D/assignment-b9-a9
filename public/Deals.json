@@ -13,15 +13,15 @@
   },
   {
     "id": 2,
-    "relevant_image": "https://i.ibb.co/TP7xzqj/2.jpg",
-    "estate_title": "Four Seasons Resort Maui at Wailea",
-    "segment_name": "Resort",
-    "description": "Exquisite tropical resort set on Maui's sunny Wailea coast, featuring spacious suites and impeccable service.",
-    "price": 800,
+    "relevant_image": "https://i.ibb.co/PZJBhBr/4.jpg",
+    "estate_title": "Aspen Mountain Lodge",
+    "segment_name": "Lodge",
+    "description": "Cozy lodge nestled in the heart of Aspen, offering ski-in/ski-out access and rustic charm.",
+    "price": 400,
     "status": "rent",
-    "area": 2500,
-    "location": "Maui, Hawaii",
-    "facilities": ["living room", "swimming pool", "Kitchen"]
+    "area": 1500,
+    "location": "Aspen, Colorado",
+    "facilities": ["living room", "Kitchen"]
   },
   {
     "id": 3,
@@ -37,15 +37,15 @@
   },
   {
     "id": 4,
-    "relevant_image": "https://i.ibb.co/PZJBhBr/4.jpg",
-    "estate_title": "Aspen Mountain Lodge",
-    "segment_name": "Lodge",
-    "description": "Cozy lodge nestled in the heart of Aspen, offering ski-in/ski-out access and rustic charm.",
-    "price": 400,
+    "relevant_image": "https://i.ibb.co/TP7xzqj/2.jpg",
+    "estate_title": "Four Seasons Resort Maui at Wailea",
+    "segment_name": "Resort",
+    "description": "Exquisite tropical resort set on Maui's sunny Wailea coast, featuring spacious suites and impeccable service.",
+    "price": 800,
     "status": "rent",
-    "area": 1500,
-    "location": "Aspen, Colorado",
-    "facilities": ["living room", "Kitchen"]
+    "area": 2500,
+    "location": "Maui, Hawaii",
+    "facilities": ["living room", "swimming pool", "Kitchen"]
   },
   {
     "id": 5,

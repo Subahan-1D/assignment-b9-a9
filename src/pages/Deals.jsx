@@ -29,7 +29,7 @@ useEffect(()=>{
                         </div>
                         <hr className="border-t border-gray-300 border-dashed my-4 w-full" />
                         <div className="flex justify-end">
-                            <Link to={`deals/${deal.id}`} className="btn btn-primary hover:bg-green-400 bg-green-500 text-white">View Property</Link>
+                            <Link to={`deals/${deal.id}`} className="btn btn-primary hover:bg-blue-400 bg-black-500  text-white">View Property</Link>
                         </div>
                     </div>
                 </div>

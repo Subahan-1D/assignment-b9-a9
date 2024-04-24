@@ -6,6 +6,7 @@ import Blog from "../pages/Blog";
 import Update from "../pages/Update";
 import Login from "../pages/Login";
 import Register from "../pages/Register";
+import DealsDetails from "../pages/DealsDetails";
 
 const router = createBrowserRouter([
     {
@@ -17,6 +18,12 @@ const router = createBrowserRouter([
                 path: '/',
                 element: <Home></Home>,
                 loader: () => fetch('/Deals.json')
+            },
+            {
+                path:'/deals/:id',
+                element:<DealsDetails></DealsDetails>,
+                loader:()=>fetch('/Deals.json')
+
             },
             {
                 path: 'blog',

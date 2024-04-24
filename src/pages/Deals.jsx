@@ -28,8 +28,8 @@ useEffect(()=>{
                             <p><span className="font-bold">Facilities:</span> {deal.facilities.join(', ')}</p>
                         </div>
                         <hr className="border-t border-gray-300 border-dashed my-4 w-full" />
-                        <div className="flex justify-end">
-                            <Link to={`deals/${deal.id}`} className="btn btn-primary hover:bg-blue-400 bg-black-500  text-white">View Property</Link>
+                        <div className="flex justify-center">
+                            <Link to={`deals/${deal.id}`} className="btn btn-primary hover:bg-blue-400 bg-black-500  text-white">View Details</Link>
                         </div>
                     </div>
                 </div>

@@ -5,60 +5,43 @@ import { AuthContext } from "../Providers/AuthProvider";
 
 
 const Login = () => {
-    const {signIn} = useContext(AuthContext)
+    const { signIn, signInWithGoogle, signInWithGithub } = useContext(AuthContext)
     const location = useLocation()
     const navigate = useNavigate()
-    console.log('location in the login page',location);
-    const handleLogIn = (e) =>{
+    console.log('location in the login page', location);
+    const handleLogIn = (e) => {
         e.preventDefault()
-       console.log(e.currentTarget);
-       const form = new FormData(e.currentTarget)
-       const email = form.get('email')
-       const password = form.get('password')
-       console.log(email,password);
-       // sign in
-       signIn(email,password)
-       .then(result =>{
-        console.log(result.user);
-        // navigate after login
-        navigate(location ?.state ? location.state:'/')
-       })
-       .catch(error =>{
-        console.log(error);
-       })
-       
+        console.log(e.currentTarget);
+        const form = new FormData(e.currentTarget)
+        const email = form.get('email')
+        const password = form.get('password')
+        console.log(email, password);
+        // sign in
+        signIn(email, password)
+            .then(result => {
+                console.log(result.user);
+                // navigate after login
+                navigate(location?.state ? location.state : '/')
+            })
+            .catch(error => {
+                console.log(error);
+            })
     }
-    // const handleLogIn = async (e) => {
-    //     e.preventDefault();
-    //     const email = e.target.email.value;
-    //     const password = e.target.password.value;
-    //     console.log(email, password);
 
-    //     try {
-    //         const result = await signIn(email, password);
-    //         console.log(result.user);
-    //         e.target.reset();
-    //         toast.success('Login successful!');
-    //         Navigate('/');
-    //     } catch (error) {
-    //         console.error(error);
-    //         toast.error('Login failed. Please check your credentials.');
-    //     }
-    // }
     return (
         <div>
-            <div className="hero min-h-screen bg-base-200">
+            <div className="hero min-h-screen ">
                 <div className="hero-content flex-col ">
                     <div className="text-center ">
                         <h1 className="text-5xl font-bold">Login now!</h1>
                     </div>
-                    <div className="card shrink-0 w-full max-w-sm shadow-2xl bg-base-100">
+                    <div className="card shrink-0 w-full max-w-sm shadow-2xl ">
                         <form onSubmit={handleLogIn} className="card-body">
                             <div className="form-control">
                                 <label className="label">
                                     <span className="label-text">Email</span>
                                 </label>
-                                <input type="email" name="email"  placeholder="email" className="input input-bordered" required />
+                                <input type="email" name="email" placeholder="email" className="input input-bordered" required />
                             </div>
                             <div className="form-control">
                                 <label className="label">
@@ -71,8 +54,8 @@ const Login = () => {
                             </div>
                             <div>
                                 <ul className='flex justify-center list-none gap-8'>
-                                    <li ><FaGoogle /></li>
-                                    <li ><FaGithub /></li>
+                                    <li onClick={signInWithGoogle} ><FaGoogle /></li>
+                                    <li onClick={signInWithGithub} ><FaGithub /></li>
                                 </ul>
                             </div>
                             <div className="form-control mt-6">

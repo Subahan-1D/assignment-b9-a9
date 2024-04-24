@@ -1,7 +1,8 @@
 import { useContext } from "react";
 import { FaGithub, FaGoogle } from "react-icons/fa";
-import { Link } from "react-router-dom";
+import { Link, Navigate } from "react-router-dom";
 import { AuthContext } from "../Providers/AuthProvider";
+import { toast } from "react-toastify";
 
 
 const Login = () => {
@@ -23,6 +24,23 @@ const Login = () => {
        })
        
     }
+    // const handleLogIn = async (e) => {
+    //     e.preventDefault();
+    //     const email = e.target.email.value;
+    //     const password = e.target.password.value;
+    //     console.log(email, password);
+
+    //     try {
+    //         const result = await signIn(email, password);
+    //         console.log(result.user);
+    //         e.target.reset();
+    //         toast.success('Login successful!');
+    //         Navigate('/');
+    //     } catch (error) {
+    //         console.error(error);
+    //         toast.error('Login failed. Please check your credentials.');
+    //     }
+    // }
     return (
         <div>
             <div className="hero min-h-screen bg-base-200">

@@ -18,7 +18,7 @@ const Navbar = () => {
     const navLinks = <div className="flex justify-center items-center font-poppins">
         <li className="text-[18px]"><NavLink to='/'>Home</NavLink></li>
         <li className="text-[18px]"><NavLink to='/blog'>Blog</NavLink></li>
-        <li ><NavLink to='/update'>Update_Profile</NavLink></li>
+        <li  className="text-[18px]"><NavLink to='/update'>Update_Profile</NavLink></li>
     </div>
     return (
         <div>

@@ -7,32 +7,7 @@ import { updateProfile } from "firebase/auth";
 
 
 const Register = () => {
-    const [registerError,setRegisterError] =useState('')
-    const [registerSuccess,setRegisterSuccess] =useState('')
     const {createUser} =useContext(AuthContext)
-    // const handleRegister=  (e) =>{
-    //     e.preventDefault()
-    //    console.log(e.currentTarget);
-    //    const form = new FormData(e.currentTarget)
-    //    const name = form.get('name')
-    //    const email = form.get('email')
-    //    const  photoURL= form.get('photoURL')
-    //    const password = form.get('password')
-    //    // reset error
-    //    setRegisterError('')
-    //    console.log(name,email,photoURL,password);
-       
-    //    // create user
-    //    createUser(email,password)
-    //    .then(result => {
-    //     console.log(result.user);
-    //     setRegisterSuccess(toast.success('Register Successfully'))
-    //    })
-    //    .catch(error => {
-    //     console.log(error)
-    //     setRegisterError(toast.error('Already Use '))
-        
-    //    })
     const handleRegister = async (e) => {
         e.preventDefault();
 
@@ -80,9 +55,9 @@ const Register = () => {
             <div className="hero min-h-screen ">
                 <div className="hero-content flex-col ">
                     <div className="text-center ">
-                        <h1 className="text-5xl font-bold">Register now!</h1>
+                        <h1 className="text-5xl font-bold animate__animated animate__backInDown">Register now!</h1>
                     </div>
-                    <div className="card shrink-0 w-full max-w-sm shadow-2xl ">
+                    <div className="card shrink-0 w-full max-w-sm shadow-2xl animate__animated animate__swing ">
                         <form onSubmit={handleRegister} className="card-body">
                             <div className="form-control">
                                 <label className="label">
@@ -116,12 +91,6 @@ const Register = () => {
                             </div>
                         </form>
                         <p className="text-center mb-3">Already have an account? <Link to='/login'><a className="link link-secondary">Log In</a></Link></p>
-                        {
-                            registerError && <p>{''}</p>
-                        }
-                        {
-                            registerSuccess && <p>{''}</p>
-                        }
                     </div>
                 </div>
             </div>

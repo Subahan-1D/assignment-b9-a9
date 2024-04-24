@@ -27,7 +27,8 @@ const router = createBrowserRouter([
             },
             {
                 path: 'blog',
-                element: <Blog></Blog>
+                element: <Blog></Blog>,
+                loader:()=>fetch('/Deals.json')
             },
             {
                 path: '/update',

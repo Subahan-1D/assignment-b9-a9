@@ -1,5 +1,4 @@
 
-
 const Update = () => {
     return (
         <div className="hero min-h-screen ">
